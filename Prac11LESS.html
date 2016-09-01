@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac11</title>
+		<link rel="stylesheet/less" type="text/css" href="Prac11LESS.less"/>		
+		<script src="less.min.js"></script>
+	</head>
+	<body>
+		<div id="uno">Color 1</div>
+		<div id="dos">Color 2</div>
+		<div id="tres">Multiplicacion</div>
+		<div id="cuatro">Screen</div>
+		<div id="cinco">Resta</div>
+		<div id="seis">Promedio</div>
+		<div id="siete">Negacion</div>
+		<input type="text" id="col1"/>
+		<input type="text" id="col2"/>
+		<button id="enviar"></button>
+		<script>
+			document.getElementById("enviar").onclick=function()
+			{
+				var col2=document.getElementById("col2").value;
+				less.modifyVars({"@col2":col2});
+				var col1=document.getElementById("col1").value;
+				less.modifyVars({"@col1":col1});
+				less.refreshStyles();
+			};
+		</script>
+	</body>
+</html>

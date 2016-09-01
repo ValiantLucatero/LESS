@@ -1,0 +1,42 @@
+@col1:red;
+@col2:blue;
+
+.mixin(@col) when(iscolor(@col))
+{
+	background-color: @col;
+}
+
+#uno
+{
+	.mixin(@col1);
+}
+
+#dos
+{
+	.mixin(@col2);
+}
+
+#tres
+{
+	.mixin(multiply(@col1,@col2));
+}
+
+#cuatro
+{
+	.mixin(screen(@col1,@col2));
+}
+
+#cinco
+{
+	.mixin(difference(@col1,@col2));
+}
+
+#seis
+{
+	.mixin(average(@col1,@col2));
+}
+
+#siete
+{
+	.mixin(negation(@col1,@col2));
+}

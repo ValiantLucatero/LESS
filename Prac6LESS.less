@@ -1,0 +1,56 @@
+@col:#FF0000;
+#color
+{
+	background-color:@col;
+}
+#ele
+{
+	& when(luma(@col)>=50%)
+	{
+		&:after
+		{
+			content:"Muy luminoso";
+		}
+	}
+	& when(luma(@col)<50%)
+	{
+		&:after
+		{
+			content:"No es lo suficientemente luminoso";
+		}
+	}
+}
+#saturation
+{
+	& when(saturation(@col)>=50%)
+	{
+		&:after
+		{
+			content:"Muy saturado";
+		}
+	}
+	& when(saturation(@col)<50%)
+	{
+		&:after
+		{
+			content:"Poco saturado";
+		}
+	}
+}
+#lightness
+{
+	& when(lightness(@col)>=50%)
+	{
+		&:after
+		{
+			content:"Casi blanco";
+		}
+	}
+	& when(lightness(@col)<50%)
+	{
+		&:after
+		{
+			content:"Casi negro";
+		}
+	}
+}

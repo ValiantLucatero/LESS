@@ -1,0 +1,38 @@
+@import "Prac1LESS.less";
+
+.mixin(@col;@fam)
+{
+	margin:2px;
+	width:100%;
+	text-align:center;
+	background-color:@col;
+	font-family:@fam;
+}
+.never
+{
+	.mixin(@rojito;"times");
+}
+.gonna
+{
+	.mixin(@verdecin;"courier");
+}
+.let
+{
+	.mixin(@azulito;"arial");
+}
+.give
+{
+	.mixin(@naranjita;"impact");
+}
+.you
+{
+	.mixin(@moradito;"magneto");
+}
+.up
+{
+	.mixin(@asdf;"serif");
+}
+.down
+{
+	.mixin(@qwerty;"cursive");
+}

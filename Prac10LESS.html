@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac10</title>
+		<link rel="stylesheet/less" type="text/css" href="Prac10LESS.less"/>		
+		<script src="less.min.js"></script>
+	</head>
+	<body>
+		<input type="text" id="dato"/>
+		<div style="border:1px solid black">Soy un div</div>
+		<script>
+			document.getElementById("dato").onchange=function()
+			{
+				var cosa=document.getElementById("dato").value;
+				less.modifyVars({"@cosa":cosa});
+				less.refreshStyle();
+			};
+		</script>
+	</body>
+</html>

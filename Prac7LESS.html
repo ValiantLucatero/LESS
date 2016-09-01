@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac7</title>
+		<link rel="stylesheet/less" type="text/css" href="Prac7LESS.less"/>		
+		<script src="less.min.js"></script>
+	</head>
+	<body>
+		<input type="text" id="dato"/>
+		<div>Puedes verme?</div>
+		<script>
+			document.getElementById("dato").onchange=function()
+			{
+				var color=document.getElementById("dato").value;
+				less.modifyVars({"@col":color});
+				less.refreshStyle();
+			};
+		</script>
+	</body>
+</html>

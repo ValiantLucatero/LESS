@@ -1,0 +1,17 @@
+@cosa:0;
+@ejem:0;
+
+.mixin(@ejem) when(iscolor(@ejem))
+{
+	background-color:@ejem;
+}
+
+.mixin(@ejem) when(ispixel(@ejem))
+{
+	width:@ejem;
+}
+
+div
+{
+	.mixin(@cosa)
+}
